@@ -1,76 +1,76 @@
 ---
-sidebarTitle: Overview
+sidebarTitle: Visão Geral
 title: WhatsApp
 ---
 
-## Preview
+## Pré-visualização
 
-You can preview and test your bot by clicking on the Preview button in the editor and change the runtime to "WhatsApp".
+Você pode pré-visualizar e testar seu bot clicando no botão de Pré-visualização no editor e mudando o tempo de execução para "WhatsApp".
 
 <Frame>
   <img
     src="/images/whatsapp/preview-dropdown.png"
-    alt="WhatsApp preview dropdown"
+    alt="Dropdown de pré-visualização do WhatsApp"
   />
 </Frame>
 
-## Limitations
+## Limitações
 
-WhatsApp environment have some limitations that you need to keep in mind when building the bot:
+O ambiente do WhatsApp possui algumas limitações que você precisa ter em mente ao construir o bot:
 
-- GIF and SVG image files are not supported. They won't be displayed.
-- Only .mp4 videos are supported (See [Supported Media Types](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media#supported-media-types) for more info).
-- Buttons content can't be longer than 20 characters. If the content is longer, it will be truncated.
-- WhatsApp only allows to display 3 buttons at a time. So we work around that by adding "..." messages to display more buttons.
-- Incompatible blocks, if present, they will be skipped:
+- Arquivos de imagem GIF e SVG não são suportados. Eles não serão exibidos.
+- Apenas vídeos .mp4 são suportados (Veja [Tipos de Mídia Suportados](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media#supported-media-types) para mais informações).
+- O conteúdo dos botões não pode ter mais de 20 caracteres. Se o conteúdo for maior, ele será truncado.
+- O WhatsApp permite exibir apenas 3 botões por vez. Portanto, trabalhamos em torno disso adicionando mensagens "..." para exibir mais botões.
+- Blocos incompatíveis, se presentes, serão ignorados:
 
-  - Payment input block
-  - Chatwoot block
-  - Script block
-  - Google Analytics block
-  - Meta Pixel blocks
-  - Cal.com block
+  - Bloco de entrada de pagamento
+  - Bloco Chatwoot
+  - Bloco de script
+  - Bloco do Google Analytics
+  - Blocos Meta Pixel
+  - Bloco Cal.com
 
-## Contact information
+## Informações de contato
 
-You can automatically assign contact name and phone number to a variable in your bot using a Set variable block with the dedicated system values:
+Você pode automaticamente atribuir nome e número de telefone do contato a uma variável no seu bot usando um bloco de Definir variável com os valores do sistema dedicados:
 
 <Frame>
   <img
     src="/images/whatsapp/contact-var.png"
-    alt="WhatsApp contact system variables"
+    alt="Variáveis de sistema de contato do WhatsApp"
   />
 </Frame>
 
-## Deploy on your phone number
+## Implantar no seu número de telefone
 
-Head over to the Share tab of your bot and click on the WhatsApp button to get the integration instructions of your bot.
+Vá até a aba Compartilhar do seu bot e clique no botão WhatsApp para obter as instruções de integração do seu bot.
 
-### Configuration
+### Configuração
 
-You can customize how your bot behaves on WhatsApp in the `Configure integration` section
+Você pode personalizar como seu bot se comporta no WhatsApp na seção `Configurar integração`
 
 <Frame>
   <img
     src="/images/whatsapp/configure-integration.png"
-    alt="WhatsApp configure integration"
+    alt="Configurar integração do WhatsApp"
   />
 </Frame>
 
-**Session expiration timeout**: A number from 0 to 48 which is the number of hours after which the session will expire. If the user doesn't interact with the bot for more than the timeout, the session will expire and if user sends a new message, it will start a new chat. The default is 4 hours.
+**Tempo limite de expiração da sessão**: Um número de 0 a 48, que é o número de horas após as quais a sessão expirará. Se o usuário não interagir com o bot por mais do que o tempo limite, a sessão expirará e, se o usuário enviar uma nova mensagem, uma nova conversa começará. O padrão é 4 horas.
 
-**Start bot condition**: A condition that will be evaluated when a user starts a conversation with your bot. If the condition is not met, the bot will not be triggered.
+**Condição de início do bot**: Uma condição que será avaliada quando um usuário iniciar uma conversa com seu bot. Se a condição não for atendida, o bot não será acionado.
 
-## Collect position
+## Coletar posição
 
-You can ask for the user's location with a basic [Text input block](../../editor/blocks/inputs/text). It will be saved as a variable with the latitude and longitude with the following format: `<LAT>, <LONG>`.
+Você pode solicitar a localização do usuário com um [bloco de entrada de texto](../../editor/blocks/inputs/text) básico. Ela será salva como uma variável com a latitude e longitude no seguinte formato: `<LAT>, <LONG>`.
 
 <Tabs>
-  <Tab title="Flow">
+  <Tab title="Fluxo">
     <Frame style={{ maxWidth: '400px' }}>
       <img
         src="/images/whatsapp/position-flow.jpg"
-        alt="Position collection flow"
+        alt="Fluxo de coleta de posição"
         className="rounded-lg"
       />
     </Frame>
@@ -79,7 +79,7 @@ You can ask for the user's location with a basic [Text input block](../../editor
     <Frame style={{ maxWidth: '400px' }}>
       <img
         src="/images/whatsapp/position-bot.png"
-        alt="Position collection bot"
+        alt="Bot de coleta de posição"
         className="rounded-lg"
       />
     </Frame>
@@ -89,19 +89,19 @@ You can ask for the user's location with a basic [Text input block](../../editor
 ## FAQ
 
 <AccordionGroup>
-  <Accordion title="How many WhatsApp numbers can I use?">
-    You can integrate as many numbers as you'd like. Keep in mind that Typebot does not provide those numbers. We work as a "Bring your own Meta application" and we give you clear instructions on [how to set up your Meta app](./create-meta-app).
+  <Accordion title="Quantos números do WhatsApp posso usar?">
+    Você pode integrar quantos números quiser. Lembre-se de que o Typebot não fornece esses números. Trabalhamos como um "Traga seu próprio aplicativo Meta" e damos instruções claras sobre [como configurar seu aplicativo Meta](./create-meta-app).
   </Accordion>
-  <Accordion title="Can I link multiple bots to the same WhatsApp number?">
-    Yes, you can. You will have to add a "Start bot condition" to each of your bots to make sure that the right bot is triggered when a user starts a conversation.
+  <Accordion title="Posso vincular vários bots ao mesmo número do WhatsApp?">
+    Sim, você pode. Você terá que adicionar uma "Condição de início do bot" a cada um dos seus bots para garantir que o bot correto seja acionado quando um usuário iniciar uma conversa.
   </Accordion>
-  <Accordion title="Does the integration with WhatsApp requires any paid API?">
-    You integrate your typebots with your own WhatsApp Business Platform which is the official service from Meta. At the moment, the first 1,000 Service conversations each month are free. For more information, refer to <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/get-started#pricing---payment-methods" target="_blank">their documentation</a>
+  <Accordion title="A integração com o WhatsApp requer alguma API paga?">
+    Você integra seus typebots com sua própria Plataforma de Negócios do WhatsApp, que é o serviço oficial da Meta. No momento, as primeiras 1.000 conversas de serviço a cada mês são gratuitas. Para mais informações, consulte a <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/get-started#pricing---payment-methods" target="_blank">documentação deles</a>
   </Accordion>
-  <Accordion title="I receive the preview initial message but then the bot doesn't respond">
-    This can be due to a mismatch between the WhatsApp number displayed in your WhatsApp application profile settings and the number you have typed in Typebot.
+  <Accordion title="Eu recebo a mensagem inicial de pré-visualização, mas depois o bot não responde">
+    Isso pode ser devido a uma incompatibilidade entre o número do WhatsApp exibido nas configurações do perfil do seu aplicativo WhatsApp e o número que você digitou no Typebot.
 
-    For example, some Brazilians have 2 numbers, 1 with 8 digits, the other with 9 digits. In Typebot, you need to type the number that is displayed in your WhatsApp application profile settings to make sure the bot works properly.
+    Por exemplo, alguns brasileiros têm 2 números, 1 com 8 dígitos e o outro com 9 dígitos. No Typebot, você precisa digitar o número que é exibido nas configurações do perfil do seu aplicativo WhatsApp para garantir que o bot funcione corretamente.
 
   </Accordion>
 </AccordionGroup>

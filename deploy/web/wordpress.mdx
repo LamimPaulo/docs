@@ -2,75 +2,72 @@
 title: WordPress
 ---
 
-Typebot has a native [WordPress plug-in](https://wordpress.org/plugins/typebot/) that helps you embed typebots in your WordPress site.
+Typebot possui um [plug-in nativo para WordPress](https://wordpress.org/plugins/typebot/) que ajuda a incorporar typebots em seu site WordPress.
 
-Of course, before using it, you need to create and publish your first typebot.
+É claro que, antes de usá-lo, você precisa criar e publicar seu primeiro typebot.
 
 <Frame>
-  <img src="/images/embeddings/wordpress-preview.png" alt="WP plugin preview" />
+  <img src="/images/embeddings/wordpress-preview.png" alt="Visualização do plug-in WP" />
 </Frame>
 
-The code snippet to paste is easily configurable in the Share tab of your bot after clicking on the "Wordpress" button.
+O trecho de código para colar é facilmente configurável na aba "Compartilhar" do seu bot depois de clicar no botão "WordPress".
 
-## Excluded pages
+## Páginas excluídas
 
-The excluded pages input is a comma-separated list of pages where you don't want your typebot to appear.
+A entrada de páginas excluídas é uma lista separada por vírgulas de páginas onde você não quer que seu typebot apareça.
 
-Examples:
+Exemplos:
 
-- `/app/*` will exclude all pages starting with `/app/`
-- `/app` will only exclude the `/app` page
-- `/app?param=1` will only exclude the `/app` page **and** with the `param` query parameter set to `1`
-- `/app?param=*` will exclude the page at `/app` **and** with the `param` query parameter set to anything
-- `/app/*?param=*` will exclude all pages starting with `/app/` **and** with the `param` query parameter set to anything
+- `/app/*` excluirá todas as páginas começando com `/app/`
+- `/app` excluirá apenas a página `/app`
+- `/app?param=1` excluirá apenas a página `/app` **e** com o parâmetro de consulta `param` definido como `1`
+- `/app?param=*` excluirá a página `/app` **e** com o parâmetro de consulta `param` definido como qualquer coisa
+- `/app/*?param=*` excluirá todas as páginas começando com `/app/` **e** com o parâmetro de consulta `param` definido como qualquer coisa
 
-## Personalize user experience
+## Personalize a experiência do usuário
 
-You can leverage the [prefilled variables](../../editor/variables#prefilled-variables) and inject your user information directly into your typebot so that the experience is entirely customized to your user.
+Você pode aproveitar as [variáveis pré-preenchidas](../../editor/variables#prefilled-variables) e injetar suas informações de usuário diretamente em seu typebot para que a experiência seja totalmente personalizada para o seu usuário.
 
-Here are the available variables from WordPress, make sure to create them in your typebot's variables dropdown:
+Aqui estão as variáveis disponíveis no WordPress, certifique-se de criá-las no menu suspenso de variáveis do seu typebot:
 
 <Frame style={{ maxWidth: '400px' }}>
   <img
     src="/images/embeddings/wp-variables.png"
-    alt="WP predefined variables"
+    alt="Variáveis pré-definidas do WP"
   />
 </Frame>
 
-The only thing you need to do to enable this is:
+A única coisa que você precisa fazer para habilitar isso é:
 
-- Use the [Wordpress Typebot plugin](https://wordpress.com/plugins/typebot)
-- Have the variables declared in your Typebot with the exact syntaxes. For the email for example, make sure your variable is spelled `WP Email`. These won't work: `wp Email`, `WP email`.
+- Usar o [plug-in do WordPress Typebot](https://wordpress.com/plugins/typebot)
+- Ter as variáveis declaradas no seu Typebot com as sintaxes exatas. Por exemplo, para o e-mail, certifique-se de que sua variável seja escrita como `WP Email`. Estas não funcionarão: `wp Email`, `WP email`.
 
-## Your typebot isn't showing?
+## Seu typebot não está aparecendo?
 
-### You have litespeed with "Localise Resources" enabled
+### Você tem litespeed com "Localise Resources" habilitado
 
-There is an a box where there is a list of URLs it localises, one of them was ‘https://cdn.jsdelivr.net’. This URL should be removed from it since it is used to import the embed library.
+Há uma caixa onde há uma lista de URLs que ele localiza, um deles era ‘https://cdn.jsdelivr.net’. Este URL deve ser removido dele, já que é usado para importar a biblioteca de incorporação.
 
-## You have litespeed with cache enabled
+## Você tem litespeed com cache habilitado
 
-Make sure to insert `web.js` and `typebot` in the JS Excludes textbox and JS Deferred Excludes under Tuning Settings.
+Certifique-se de inserir `web.js` e `typebot` na caixa de texto de JS Excludes e JS Deferred Excludes em Tuning Settings.
 
-### You have a cache plugin
+### Você tem um plugin de cache
 
-Plugins like WP Rocket prevent Typebot to work.
+Plugins como WP Rocket impedem que o Typebot funcione.
 
-For WP Rocket:
+Para o WP Rocket:
 
-1. Go to Settings > WP Rocket > Excluded Inline Javascript:
+1. Vá para Configurações > WP Rocket > Excluded Inline Javascript:
 
 <Frame>
   <img src="/images/embeddings/wp-rocket.png" alt="WP Rocket" />
 </Frame>
 
-2. Type "typebot"
-3. Save
+2. Digite "typebot"
+3. Salve
 
-### You have plugin that adds `defer` attribute to external scripts
+### Você tem um plugin que adiciona o atributo `defer` a scripts externos
 
-You need to add an exception for Typebot in the corresponding plugin config.
-
-### Still not working
-
-Contact me on the application using the typebot at the bottom right corner
+Você precisa adicionar uma exceção para o Typebot na configuração do plugin correspondente.
+inferior direito
