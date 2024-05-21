@@ -1,142 +1,143 @@
 ---
-title: Set variable
+title: Bloco Definir Variável
 icon: pen
 ---
 
-The "Set variable" block allows you to set a particular value to a variable.
+O bloco "Definir variável" permite que você atribua um valor específico a uma variável.
 
 <Frame>
-  <img src="/images/blocks/logic/set-variable.png" alt="Set variable" />
+  <img src="/images/blocks/logic/set-variable.png" alt="Definir variável" />
 </Frame>
 
-## Custom
+## Personalizado
 
-You can set your variable with any value with `Custom`. It can be any kind of plain text but also **Javascript code**.
+Você pode definir sua variável com qualquer valor em `Personalizado`. Pode ser qualquer tipo de texto simples, mas também **código JavaScript**.
 
-### Expressions with existing variables
+### Expressões com variáveis existentes
 
-It means you can apply operations on existing variables.
+Isso significa que você pode aplicar operações em variáveis existentes.
 
-Add a value to your variable:
-
-```
-{{Score}} + 5
-```
-
-Compute a sum of variables:
+Adicionar um valor à sua variável:
 
 ```
-{{Score}} + {{Answer}}
+{{Pontuação}} + 5
 ```
 
-Multiply variables together:
+Calcular a soma de variáveis:
 
 ```
-{{Score}} * {{Multiplier}}
+{{Pontuação}} + {{Resposta}}
 ```
 
-Compute a percentage:
+Multiplicar variáveis entre si:
 
 ```
-{{Score}} * 100 / {{Max Score}}
+{{Pontuação}} * {{Multiplicador}}
 ```
 
-Extract the first name from a full name:
+Calcular uma porcentagem:
 
 ```
-{{Full name}}.split(' ')[0]
+{{Pontuação}} * 100 / {{Pontuação Máxima}}
 ```
 
-Transform existing variable to upper case or lower case:
+Extrair o primeiro nome de um nome completo:
 
 ```
-{{Name}}.toUpperCase()
+{{Nome completo}}.split(' ')[0]
+```
+
+Transformar variável existente em maiúsculas ou minúsculas:
+
+```
+{{Nome}}.toUpperCase()
 ```
 
 ```
-{{Name}}.toLowerCase()
+{{Nome}}.toLowerCase()
 ```
 
-This can also be Javascript code. It will read the returned value of the code and set it to your variable.
+Isso também pode ser código JavaScript. Ele lerá o valor retornado do código e o atribuirá à sua variável.
 
 ```js
-const name = 'John' + 'Smith'
-return name
+const nome = 'João' + 'Silva'
+return nome
 ```
 
-If you don't provide the `return` keyword then it will be automatically prepended to the beginning of your code.
+Se você não fornecer a palavra-chave `return`, ela será automaticamente adicionada ao início do seu código.
 
 ```js
-'John' + 'Smith'
+'João' + 'Silva'
 ```
 
-is the same as
+é o mesmo que
 
 ```js
-return 'John' + 'Smith'
+return 'João' + 'Silva'
 ```
 
 <Info>
-Variables in script are not parsed, they are evaluated. So it should be treated as if it were real Javascript variables.
+Variáveis no script não são analisadas, elas são avaliadas. Portanto, devem ser tratadas como se fossem variáveis JavaScript reais.
 
-So, if you write `"{{My variable}}"`, it will parse the variable ID (something like `vclfqgqkdf000008mh3r6xakty`). You need to remove the double quotes to properly get the variable content value.
+Portanto, se você escrever `"{{Minha variável}}"`, ele analisará o ID da variável (algo como `vclfqgqkdf000008mh3r6xakty`). Você precisa remover as aspas duplas para obter corretamente o valor do conteúdo da variável.
 
-For example,
+Por exemplo,
 
-- ❌ `"{{URL base}}/path"` => `vclfqgqkdf000008mh3r6xakty/path`
-- ✅ `{{URL base}} + '/path'` => `https://domain.com/path`
-- ✅ `` `${{{URL base}}}/path` `` => `https://domain.com/path`
+- ❌ `"{{URL base}}/caminho"` => `vclfqgqkdf000008mh3r6xakty/caminho`
+- ✅ `{{URL base}} + '/caminho'` => `https://dominio.com/caminho`
+- ✅ `` `${{{URL base}}}/caminho` `` => `https://dominio.com/caminho`
 
 </Info>
 
 <Info>
-  Variables content can either be a string or a list of strings. Check out
-  [Valid value types](../../variables#valid-value-types) for more information.
+  O conteúdo das variáveis pode ser apenas uma string ou uma lista de strings. Confira
+  [Tipos de valor válidos](../../variables#valid-value-types) para mais informações.
 </Info>
 
-## Result ID
+## ID do Resultado
 
-This will set your variable with the current result ID. The result ID is the ID that corresponds to a row of your [Results](../../../results/overview.mdx) table. It can be considered like a User ID for the currently chatting user.
+Isso definirá sua variável com o ID do resultado atual. O ID do resultado é o ID que corresponde a uma linha da sua tabela de [Resultados](../../../results/overview.mdx). Pode ser considerado como um ID de usuário para o usuário atualmente em conversa.
 
-## Moment of the day
+## Momento do dia
 
-It will set your variable with either one of these values based on the user's time of the day: `morning`, `afternoon`, `evening`, `night`.
+Isso definirá sua variável com um dos seguintes valores com base no horário do usuário: `manhã`, `tarde`, `noite`.
 
-Then you can use this variable to conditionally display content:
+Então você pode usar essa variável para exibir conteúdo condicionalmente:
 
 <Frame style={{ maxWidth: '400px' }}>
   <img
     src="/images/blocks/logic/moment-condition.png"
-    alt="Moment of the day condition"
+    alt="Condição do momento do dia"
   />
 </Frame>
 
-## Map item with same index
+## Mapear item com o mesmo índice
 
-This is a convenient value block that allows you to easily get an item from a list that has the same index as an item from another list.
+Este é um bloco de valor conveniente que permite que você obtenha facilmente um item de uma lista que tem o mesmo índice que um item de outra lista.
 
-When you are pulling data from another service, sometimes, you will have 2 lists: `Labels` and `Ids`. Labels are the data displayed to the user and Ids are the data used for other requests to that external service.
+Quando você está puxando dados de outro serviço, às vezes, você terá 2 listas: `Rótulos` e `Ids`. Os rótulos são os dados exibidos ao usuário e os Ids são os dados usados para outras solicitações a esse serviço externo.
 
-This value block allows you to find the `Id` from `Ids` with the same index as `Label` in `Labels`
+Este bloco de valor permite que você encontre o `Id` de `Ids` com o mesmo índice que `Label` em `Labels`.
 
 <Frame>
   <img
     src="/images/blocks/logic/set-variable-map-item.png"
-    alt="Set variable map item with same index"
+    alt="Definir variável mapear item com mesmo índice"
   />
 </Frame>
 
-## Save in results
+## Salvar nos resultados
 
-By default, new variables are not persisted in the [Results](../../../results) table. They are only stored for the current user chat session. Enabling this option will save the variable in the `Results` table.
+Por padrão, novas variáveis não são persistidas na tabela de [Resultados](../../../results). Elas são armazenadas apenas para a sessão de bate-papo do usuário atual. Habilitar esta opção salvará a variável na tabela `Resultados`.
 
-## Execute on client
+## Executar no cliente
 
-This option is useful when you want to execute the custom code on the client side. This is only necessary when you need access the user's browser information. So, if you need access to `window`, `document`, `navigator`, etc., you should enable this option.
+Esta opção é útil quando você quer executar o seu código customizado no lado do cliente. isto só e necessario quando você precisa de acesso a informacão do navegador do usuario.
+Então, se você precisa de acesso a `window`, `document`, `navigator`, etc.,você vai precisar ativar esta opcão.
 
-## Get user's geo location
+## Pegar a geo localização do usuario
 
-For this you can provide the following custom code:
+para isto, você pode usar este código customizado:
 
 ```js
 function getLocation() {
@@ -152,12 +153,12 @@ function getLocation() {
 
 const coords = await getLocation()
 
-// Check for error
+// Checa por erros
 if (coords === 'error') {
-  return 'Unable to get location'
+  return 'Não foi possivel pegar a location'
 }
 
 return coords
 ```
+Esta função custom só vai funcionar quando é executada no navegador do usuário, então você deve ter certeza de ativar a opção de rodar no navegador do cliente
 
-This custom function can only work when it is executed on the client browser so you need to make sure to enable the "Execute on client" option.
