@@ -1,16 +1,16 @@
 ---
-title: File upload
+title: Upload de Arquivo
 icon: upload
 ---
 
-The File upload input block allows you to collect files from your user.
+O bloco de entrada de Upload de Arquivo permite que você colete arquivos do seu usuário.
 
 <Tabs>
-  <Tab title="Flow">
+  <Tab title="Fluxo">
     <Frame>
       <img
         src="/images/blocks/inputs/file-upload-flow.png"
-        alt="File upload input in flow"
+        alt="Entrada de upload de arquivo no fluxo"
         className="rounded-lg"
       />
     </Frame>
@@ -19,23 +19,23 @@ The File upload input block allows you to collect files from your user.
     <Frame>
       <img
         src="/images/blocks/inputs/file-upload-bot.png"
-        alt="File upload input in bot"
+        alt="Entrada de upload de arquivo no bot"
         className="rounded-lg"
       />
     </Frame>
   </Tab>
 </Tabs>
 
-The placeholder accepts [HTML](https://en.wikipedia.org/wiki/HTML).
+O espaço reservado aceita [HTML](https://en.wikipedia.org/wiki/HTML).
 
-## Size limit
+## Limite de tamanho
 
-There is a 10MB fixed limit per uploaded file. If you want your respondents to upload larger files, you should ask them to upload their files to a cloud storage service (e.g. Google Drive, Dropbox, etc.) and share the link with you.
+Há um limite fixo de 10MB por arquivo enviado. Se você quiser que seus respondentes enviem arquivos maiores, deve pedir que façam o upload de seus arquivos para um serviço de armazenamento em nuvem (por exemplo, Google Drive, Dropbox, etc.) e compartilhem o link com você.
 
-## Visibility
+## Visibilidade
 
-This option allows you to choose between generating public URLs for the uploaded files or keeping them private. If you choose to keep the files private, you will be able to see the file only if you are logged in to your Typebot account.
+Esta opção permite que você escolha entre gerar URLs públicas para os arquivos enviados ou mantê-los privados. Se você escolher manter os arquivos privados, poderá ver o arquivo apenas se estiver logado em sua conta Typebot.
 
-Note that if you choose to keep the files private, you will not be able to use the file URL with other blocks like Attachment in the Send email block or others. These services won't be able to read the files.
+Observe que, se você escolher manter os arquivos privados, não poderá usar a URL do arquivo com outros blocos, como Anexo no bloco Enviar e-mail ou outros. Esses serviços não poderão ler os arquivos.
 
-By default, this option is set to `Auto`. This means that the files will be public if uploaded from the web runtime but private if uploaded from the WhatsApp runtime.
+Por padrão, esta opção está definida como `Auto`. Isso significa que os arquivos serão públicos se enviados pelo runtime web, mas privados se enviados pelo runtime WhatsApp.

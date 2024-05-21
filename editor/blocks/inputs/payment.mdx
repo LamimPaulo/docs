@@ -1,39 +1,39 @@
 ---
-title: Payment
+title: Pagamento
 icon: credit-card
 ---
 
-The Payment input block allows you to collect payment. You first need to add your Stripe:
+O bloco de entrada de Pagamento permite que você colete pagamentos. Primeiro, você precisa adicionar sua conta Stripe:
 
-## Connect Stripe account
+## Conectar conta Stripe
 
-After clicking on `Select an account > Connect new`, a configuration popup appears:
+Após clicar em `Selecionar uma conta > Conectar nova`, uma janela de configuração aparecerá:
 
 <Frame>
   <img
     src="/images/blocks/inputs/configure-stripe.png"
-    alt="Stripe configuration"
+    alt="Configuração Stripe"
   />
 </Frame>
 
-- Account name could be anything you'd like it's not something that has to come from Stripe.
-- Test keys can be found here: https://dashboard.stripe.com/test/apikeys
-- Live keys can be found here: https://dashboard.stripe.com/apikeys
+- O nome da conta pode ser qualquer coisa que você queira; não precisa vir da Stripe.
+- As chaves de teste podem ser encontradas aqui: https://dashboard.stripe.com/test/apikeys
+- As chaves ao vivo podem ser encontradas aqui: https://dashboard.stripe.com/apikeys
 
-Test keys will be used in the preview for testing purposes. Live keys will be used in the published bot.
+As chaves de teste serão usadas na visualização para fins de teste. As chaves ao vivo serão usadas no bot publicado.
 
-If you'd still like to still use the test keys in the published bot you just need to also fill in the test keys into the live keys inputs.
+Se você ainda quiser usar as chaves de teste no bot publicado, basta preencher as chaves de teste nos campos das chaves ao vivo.
 
-## Input configuration
+## Configuração de entrada
 
-Once you have a Stripe account, you can select it and configure your input:
+Depois de ter uma conta Stripe, você pode selecioná-la e configurar sua entrada:
 
 <Tabs>
-  <Tab title="Flow">
+  <Tab title="Fluxo">
     <Frame>
       <img
         src="/images/blocks/inputs/payment-flow.png"
-        alt="Payment input in flow"
+        alt="Entrada de pagamento no fluxo"
         className="rounded-lg"
       />
     </Frame>
@@ -42,13 +42,13 @@ Once you have a Stripe account, you can select it and configure your input:
     <Frame>
       <img
         src="/images/blocks/inputs/payment-bot.png"
-        alt="Payment input in bot"
+        alt="Entrada de pagamento no bot"
         className="rounded-lg"
       />
     </Frame>
   </Tab>
 </Tabs>
 
-Make sure to enable any payment method you'd like to appear in your Stripe dashboard at this URL: https://dashboard.stripe.com/settings/payment_methods.
+Certifique-se de habilitar qualquer método de pagamento que você deseja que apareça no seu painel da Stripe nesta URL: https://dashboard.stripe.com/settings/payment_methods.
 
-This is where you can enable Cards, Apple Pay, Google Pay, Alipay, WeChat Pay etc.
+É aqui que você pode habilitar Cartões, Apple Pay, Google Pay, Alipay, WeChat Pay, etc.
