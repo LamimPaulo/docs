@@ -115,24 +115,22 @@ Então os valores estarão disponíveis na página de Resultados em colunas espe
 O conteúdo das variáveis pode ser um texto (string) ou uma lista de textos (string[]).
 
 ```ts
-// ✅ Good
+// ✅ Bom
 'Hello', ['item 1', 'item 2']
 
-// ❌ Not good
+// ❌ Ruim
 2, true, { foo: 'bar' }
-// Will automatically converted into
+// Vai automaticamente ser convertido em
 '2', 'true', '{ foo: "bar" }'
 ```
 
-If you provide an object, number or boolean. It will always be converted into either a text
-or a list of texts before the variable is saved into the database.
+Se você fornecer um objeto, número ou booleano, ele sempre será convertido em texto ou em uma lista de textos antes que a variável seja salva no banco de dados.
 
-This limitation is intended. Variables should have simple content. It forces you to have a cleaner bot structure and to use the variable content in a more meaningful way.
+Essa limitação é intencional. As variáveis devem ter conteúdo simples. Isso força você a manter uma estrutura de bot mais limpa e usar o conteúdo da variável de forma mais significativa.
 
-In some cases, the variable content will be dynamically parsed to match its intended type. For example, if you provide a text that
-looks like a number in a condition block, it will be converted into a number during the condition execution.
+Em alguns casos, o conteúdo da variável será dinamicamente analisado para corresponder ao seu tipo pretendido. Por exemplo, se você fornecer um texto que parece um número em um bloco de condição, ele será convertido em um número durante a execução da condição.
 
-If you really need to save a complex content into a variable, for example an object, you can use the `JSON.stringify` function to convert it into a text. And whenever you are using the variable, you can dynamically parse it back into an object using `JSON.parse` in an [inline format](#inline-variable-formatting):
+Se você realmente precisar salvar um conteúdo complexo em uma variável, como um objeto, você pode usar a função JSON.stringify para convertê-lo em texto. Em seguida, sempre que estiver usando a variável, você pode analisá-la dinamicamente de volta para um objeto usando `JSON.parse` em um [formato inline:](#inline-variable-formatting):
 
 ```ts
 {{=JSON.parse({{My object variable}})=}}
