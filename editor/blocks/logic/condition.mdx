@@ -1,15 +1,15 @@
 ---
-title: Condition
+title: Condição
 icon: code-branch
 ---
 
-The Condition block allows you to split your flow in two based on a condition.
+O bloco de Condição permite dividir seu fluxo em dois com base em uma condição.
 
-<Frame caption='This can be translated to: "If Score is greater than 20 then go to this path. Otherwise, go to the other path."'>
-  <img src="/images/blocks/logic/condition.png" alt="Condition" />
+<Frame caption='Isso pode ser traduzido para: "Se a pontuação for maior que 20, siga este caminho. Caso contrário, siga pelo outro caminho."'>
+  <img src="/images/blocks/logic/condition.png" alt="Condição" />
 </Frame>
 
-A condition can contain different comparisons that are evaluated in order and linked with a logical operator: 'AND' or 'OR'.
+Uma condição pode conter diferentes comparações que são avaliadas em ordem e vinculadas com um operador lógico: 'E' ou 'OU'.
 
 <div className="relative" style={{ paddingBottom: '64.5933014354067%' }}>
   <iframe
@@ -19,63 +19,60 @@ A condition can contain different comparisons that are evaluated in order and li
   />
 </div>
 
-## Operators
+## Operadores
 
-<ResponseField name="Equal to">
-  Will match if the provided value is strictly equal to the value.
+<ResponseField name="Igual a">
+  Corresponderá se o valor fornecido for estritamente igual ao valor.
 </ResponseField>
 
-<ResponseField name="Not equal">
-  Will match if the provided value is not equal to the value.
+<ResponseField name="Diferente">
+  Corresponderá se o valor fornecido for diferente do valor.
 </ResponseField>
 
-<ResponseField name="Contains">
-  Will match if the provided value contains the value. If a list is provided, it
-  will match if the list has at least one element in common with the value.
+<ResponseField name="Contém">
+  Corresponderá se o valor fornecido contiver o valor. Se uma lista for fornecida, ela corresponderá se a lista tiver pelo menos um elemento em comum com o valor.
 </ResponseField>
 
-<ResponseField name="Does not contain">
-  Same as `Contains` but will match the inverse.
+<ResponseField name="Não contém">
+  O mesmo que `Contém`, mas corresponderá ao inverso.
 </ResponseField>
 
-<ResponseField name="Greater than">
-  Will match if the provided value is greater or equal than the value.
+<ResponseField name="Maior que">
+  Corresponderá se o valor fornecido for maior ou igual ao valor.
 </ResponseField>
 
-<ResponseField name="Less than">
-  Will match if the provided value is less or equal than the value.
+<ResponseField name="Menor que">
+  Corresponderá se o valor fornecido for menor ou igual ao valor.
 </ResponseField>
 
-<ResponseField name="Is set">
-  Will match if the provided value is not null or undefined and not an empty
-  string.
+<ResponseField name="Está definido">
+  Corresponderá se o valor fornecido não for nulo nem indefinido e não for uma string vazia.
 </ResponseField>
 
-<ResponseField name="Is empty">
-  Will match if the provided value is null, undefined, or an empty string.
+<ResponseField name="Está vazio">
+  Corresponderá se o valor fornecido for nulo, indefinido ou uma string vazia.
 </ResponseField>
 
-<ResponseField name="Starts with">
-  Will match if the provided value starts with the value.
+<ResponseField name="Começa com">
+  Corresponderá se o valor fornecido começar com o valor.
 </ResponseField>
 
-<ResponseField name="Ends with">
-  Will match if the provided value ends with the value.
+<ResponseField name="Termina com">
+  Corresponderá se o valor fornecido terminar com o valor.
 </ResponseField>
 
-<ResponseField name="Matches regex">
-Value should start and end with `/` and contain a valid regex pattern.
+<ResponseField name="Corresponde ao regex">
+O valor deve começar e terminar com `/` e conter um padrão regex válido.
 
-Example:
+Exemplo:
 
-- `/^hello$/` will match if the string is strictly equal to "hello".
-- `/hello/` will match if the string contains "hello". Like "hello world".
-- `/hello/i` will match if the string contains "hello" case-insensitive. Like "Hello world".
-- `/[0-9]+/` will match if the string contains one or more digits. Like "123".
+- `/^hello$/` corresponderá se a string for estritamente igual a "hello".
+- `/hello/` corresponderá se a string contiver "hello". Como "hello world".
+- `/hello/i` corresponderá se a string contiver "hello" sem diferenciação entre maiúsculas e minúsculas. Como "Hello world".
+- `/[0-9]+/` corresponderá se a string contiver um ou mais dígitos. Como "123".
 
 </ResponseField>
 
-<ResponseField name="Does not match regex">
-  Same as `Matches regex` but will match if the provided value does not match
-  the regex pattern.
+<ResponseField name="Não corresponde ao regex">
+  O mesmo que `Corresponde ao regex`, mas corresponderá se o valor fornecido não corresponder ao padrão regex.
 </ResponseField>
