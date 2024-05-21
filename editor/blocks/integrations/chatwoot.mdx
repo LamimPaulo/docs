@@ -2,60 +2,60 @@
 title: Chatwoot
 ---
 
-The Chatwoot integration block allows you to open a Chatwoot widget to allow your user to directly talk to a human. It allows you to add a Live Chat layer on your typebot.
+O bloco de integração do Chatwoot permite que você abra um widget do Chatwoot para permitir que seu usuário fale diretamente com um humano. Isso permite que você adicione uma camada de Chat ao vivo ao seu typebot.
 
-## Requirements
+## Requisitos
 
-For this integration, you need a Chatwoot account and create a "Website" inbox:
+Para esta integração, você precisa de uma conta no Chatwoot e criar uma caixa de entrada "Website":
 
 <Frame>
   <img
     src="/images/blocks/integrations/chatwoot/website-inbox.png"
-    alt="Create website inbox"
+    alt="Criar caixa de entrada do site"
   />
 </Frame>
 
-## Setup
+## Configuração
 
-Insert a Chatwoot block where you want to trigger the widget:
+Insira um bloco Chatwoot onde você deseja acionar o widget:
 
 <Frame>
   <img
     src="/images/blocks/integrations/chatwoot/options.png"
-    alt="Chatwoot block"
+    alt="Bloco Chatwoot"
   />
 </Frame>
 
-To find your website token, head over to Chatwoot in your Inbox settings:
+Para encontrar seu token de site, vá para o Chatwoot nas configurações da sua caixa de entrada:
 
 <Frame>
   <img
     src="/images/blocks/integrations/chatwoot/website-token.png"
-    alt="Find website token"
+    alt="Encontrar token do site"
   />
 </Frame>
 
-You can prefill user information by adding collected variables to the "Set user details" inputs.
+Você pode preencher informações do usuário adicionando variáveis coletadas às entradas de "Definir detalhes do usuário".
 
-For example, if you set the "Email" input to "john@gmail.com" then Chatwoot will automatically associate this email to the current user.
+Por exemplo, se você definir a entrada "Email" como "john@gmail.com", o Chatwoot associará automaticamente este e-mail ao usuário atual.
 
-## Custom attributes
+## Atributos personalizados
 
-You can add these custom attributes that Typebot will automatically fill in for you:
+Você pode adicionar esses atributos personalizados que o Typebot preencherá automaticamente para você:
 
-### Result URL
+### URL do resultado
 
-You can link the current result URL to the Chatwoot conversation by creating this custom attribute:
+Você pode vincular a URL do resultado atual à conversa do Chatwoot criando este atributo personalizado:
 
 <Frame>
   <img
     src="/images/blocks/integrations/chatwoot/custom-attribute.png"
-    alt="Chatwoot custom attribute"
+    alt="Atributo personalizado Chatwoot"
   />
 </Frame>
 
-### Set user behavior
+### Definir comportamento do usuário
 
-If you are prefilling user information, by default, if you leave the ID input empty, it will set the Chatwoot user ID as either the `Email` or the Result ID.
+Se você estiver preenchendo informações do usuário, por padrão, se deixar a entrada de ID vazia, ele definirá o ID do usuário do Chatwoot como o `Email` ou o ID do Resultado.
 
-Setting the `Email` as the ID allows us to avoid having contact not properly merged together (https://github.com/chatwoot/chatwoot/issues/2811)
+Definir o `Email` como o ID nos permite evitar que contatos não sejam mesclados corretamente (https://github.com/chatwoot/chatwoot/issues/2811)

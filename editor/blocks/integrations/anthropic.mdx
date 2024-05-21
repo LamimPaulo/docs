@@ -3,44 +3,43 @@ title: Anthropic
 ---
 
 <Warning>
-  There is an ongoing issue with Anthropic block streaming capabilities. We are
-  working on a fix and will update this page once the issue is resolved.
+  Há um problema em andamento com as capacidades de streaming do bloco Anthropic. Estamos trabalhando em uma solução e atualizaremos esta página assim que o problema for resolvido.
 </Warning>
 
-## Create Message
+## Criar Mensagem
 
-With the Anthropic block, you can create chat messages based on your user queries and display the answer back to your typebot using Claude AI.
+Com o bloco Anthropic, você pode criar mensagens de chat com base nas consultas do usuário e exibir a resposta de volta ao seu typebot usando o Claude AI.
 
 <Frame>
   <img
     src="/images/blocks/integrations/anthropic/overview.png"
-    alt="Anthropic block"
+    alt="Bloco Anthropic"
   />
 </Frame>
 
-Similarly to the OpenAI block, this integration comes with a convenient message type called **Dialogue**. It allows you to easily pass a sequence of saved assistant / user messages history to Claude AI:
+Da mesma forma que o bloco OpenAI, esta integração vem com um tipo de mensagem conveniente chamado **Diálogo**. Isso permite que você passe facilmente uma sequência de histórico de mensagens salvas do assistente / usuário para o Claude AI:
 
 <Frame>
   <img
     src="/images/blocks/integrations/anthropic/append-to-history.png"
-    alt="Claude AI messages sequence"
+    alt="Sequência de mensagens Claude AI"
   />
 </Frame>
 
-Then you can give the Claude AI block access to this sequence of messages:
+Então você pode dar ao bloco Claude AI acesso a essa sequência de mensagens:
 
 <Frame>
   <img
     src="/images/blocks/integrations/anthropic/dialogue-usage.png"
-    alt="Claude AI messages sequence"
+    alt="Sequência de mensagens Claude AI"
   />
 </Frame>
 
-Finally, save the response of the assistant to a variable in order to append it in the chat history and also display it on your typebot.
+Por fim, salve a resposta do assistente em uma variável para poder anexá-la ao histórico do chat e também exibi-la no seu typebot.
 
 <Frame>
   <img
     src="/images/blocks/integrations/anthropic/assistant-message.png"
-    alt="Claude AI assistant message variable"
+    alt="Variável de mensagem do assistente Claude AI"
   />
 </Frame>

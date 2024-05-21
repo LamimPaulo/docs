@@ -2,47 +2,47 @@
 title: Zemantic AI
 ---
 
-With the Zemantic AI block, you can search and retrieve results or LLM summaries from your documents stored on Zemantic AI.
+Com o bloco Zemantic AI, você pode pesquisar e recuperar resultados ou resumos de LLM dos seus documentos armazenados no Zemantic AI.
 
 <Frame>
   <img
     src="/images/blocks/integrations/zemanticAi/overview.png"
-    alt="Zemantic AI block"
+    alt="Bloco Zemantic AI"
   />
 </Frame>
 
-## Settings
+## Configurações
 
-This integration requires a Zemantic AI account. If you don't have one yet, you can create one [here](https://zemantic.ai/).
+Esta integração requer uma conta Zemantic AI. Se você ainda não tem uma, pode criar uma [aqui](https://zemantic.ai/).
 
-The block has the following settings:
+O bloco possui as seguintes configurações:
 
 <Frame>
   <img
     src="/images/blocks/integrations/zemanticAi/settings.png"
-    alt="Zemantic AI settings"
+    alt="Configurações Zemantic AI"
   />
 </Frame>
 
-- Zemantic AI account: create or select the Zemantic AI credentials you want to use.
-- Project ID: The project id of the project containing the documents you want to search
-- Question or Query: The question you want to ask your Zemantic AI documents
-- Max Results: The maximum number of results you want to retrieve
+- Conta Zemantic AI: criar ou selecionar as credenciais do Zemantic AI que você deseja usar.
+- ID do Projeto: O ID do projeto contendo os documentos que você deseja pesquisar.
+- Pergunta ou Consulta: A pergunta que você deseja fazer aos seus documentos do Zemantic AI.
+- Resultados Máximos: O número máximo de resultados que você deseja recuperar.
 
-### Prompt Settings
+### Configurações de Prompt
 
-- System Prompt: The prompt you want to use to guide the LLM behavior
-- Prompt: The prompt you want to use to summarize your documents
+- Prompt do Sistema: O prompt que você deseja usar para orientar o comportamento do LLM.
+- Prompt: O prompt que você deseja usar para resumir seus documentos.
 
-## Troobleshooting
+## Solução de Problemas
 
-### Error message: "Zemantic AI block returned error"
+### Mensagem de erro: "Zemantic AI block returned error"
 
-It means your Zemantic AI block is not configured properly. Please check the following:
+Isso significa que seu bloco Zemantic AI não está configurado corretamente. Verifique o seguinte:
 
-- You have selected an Zemantic AI account
-- You have filled out the Question or Query field
+- Você selecionou uma conta Zemantic AI.
+- Você preencheu o campo Pergunta ou Consulta.
 
-### It returns an empty message
+### Retorna uma mensagem vazia
 
-Either you misconfigured the block or your may have have gone over the context limits of the LLM. You can try lowering the number of results to retrieve or shortening your prompt.
+Ou você configurou o bloco incorretamente ou pode ter excedido os limites de contexto do LLM. Você pode tentar reduzir o número de resultados a serem recuperados ou encurtar seu prompt.
