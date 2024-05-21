@@ -37,28 +37,13 @@
   },
   "tabs": [
     {
-      "name": "Self-Hosting",
-      "url": "self-hosting"
-    },
-    {
-      "name": "Contribute",
-      "url": "contribute"
-    },
-    {
       "name": "API Reference",
       "url": "api-reference"
     }
   ],
-  "anchors": [
-    {
-      "name": "Community",
-      "icon": "discord",
-      "url": "https://typebot.io/discord"
-    }
-  ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Iniciando",
       "pages": ["get-started/introduction", "get-started/overview"]
     },
     {
@@ -66,12 +51,12 @@
       "pages": [
         "editor/graph",
         {
-          "group": "Blocks",
+          "group": "Blocos",
           "icon": "block",
           "pages": [
             "editor/blocks/overview",
             {
-              "group": "Bubbles",
+              "group": "Bolhas",
               "pages": [
                 "editor/blocks/bubbles/text",
                 "editor/blocks/bubbles/image",
@@ -97,7 +82,7 @@
               ]
             },
             {
-              "group": "Logic",
+              "group": "Logica",
               "pages": [
                 "editor/blocks/logic/set-variable",
                 "editor/blocks/logic/condition",
@@ -110,7 +95,7 @@
               ]
             },
             {
-              "group": "Integrations",
+              "group": "Integrações",
               "pages": [
                 "editor/blocks/integrations/google-sheets",
                 "editor/blocks/integrations/google-analytics",
@@ -139,15 +124,15 @@
       ]
     },
     {
-      "group": "Theme",
+      "group": "Tema",
       "pages": ["theme/overview", "theme/font"]
     },
     {
-      "group": "Settings",
+      "group": "Configurações",
       "pages": ["settings/overview", "settings/remember-user"]
     },
     {
-      "group": "Deploy",
+      "group": "Publicar",
       "pages": [
         {
           "group": "Web",
@@ -180,11 +165,11 @@
       ]
     },
     {
-      "group": "Results",
+      "group": "Resultados",
       "pages": ["results/overview", "results/analytics"]
     },
     {
-      "group": "Workspace",
+      "group": "Área de Trabalho",
       "pages": [
         "workspace",
         "workspace/add-members-and-guests",
@@ -193,7 +178,7 @@
       ]
     },
     {
-      "group": "Guides",
+      "group": "Guias",
       "pages": [
         "guides/how-to-get-help",
         "guides/mailer-lite",
@@ -207,7 +192,7 @@
       "pages": ["faq", "privacy-policies", "report-abuse", "breaking-changes"]
     },
     {
-      "group": "Get started",
+      "group": "Iniciando",
       "pages": [
         "self-hosting/get-started",
         "self-hosting/configuration",
@@ -215,7 +200,7 @@
       ]
     },
     {
-      "group": "Deploy",
+      "group": "Publicando",
       "pages": [
         "self-hosting/deploy/docker",
         "self-hosting/deploy/vercel",
