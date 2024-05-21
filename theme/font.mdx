@@ -1,26 +1,26 @@
 ---
-title: Font
+title: Fonte
 ---
 
-You can change the font of your typebot in the Theme tab under the Global section.
+Você pode alterar a fonte do seu typebot na aba Tema, na seção Global.
 
-There, you can choose between choosing a font from Google Fonts or defining your own custom font.
+Lá, você pode escolher entre selecionar uma fonte do Google Fonts ou definir sua própria fonte personalizada.
 
-## How to import my own font?
+## Como importar minha própria fonte?
 
-You can import your own font by clicking on the "Custom" option. There you need to define the font family and the CSS that defines all the `@font-face` properties.
+Você pode importar sua própria fonte clicando na opção "Personalizada". Lá você precisa definir a família de fontes e o CSS que define todas as propriedades de `@font-face`.
 
-For example, if I want to import my font called "Awesome Font", I would define the following family value: `"Awesome Font", "Helvetica Neue", sans-serif`. This should be a list of font names separated by commas. The first font name in the list is the font that will be used if it is available. If the name is not available, the browser will try to use the next font in the list. A font name that contains white-space should be quoted.
+Por exemplo, se eu quiser importar minha fonte chamada "Fonte Incrível", eu definiria o seguinte valor para a família: `"Fonte Incrível", "Helvetica Neue", sans-serif`. Esta deve ser uma lista de nomes de fontes separados por vírgulas. O primeiro nome de fonte na lista é a fonte que será usada se estiver disponível. Se o nome não estiver disponível, o navegador tentará usar a próxima fonte da lista. Um nome de fonte que contém espaço em branco deve ser colocado entre aspas.
 
-Then I would define the content like so:
+Em seguida, eu definiria o conteúdo da seguinte forma:
 
 ```css
 @font-face {
-  font-family: 'Awesome Font';
-  src: url('https://example.com/awesome.woff') format('woff'), url('https://example.com/awesome.ttf') format('truetype');
+  font-family: 'Fonte Incrível';
+  src: url('https://exemplo.com/fonteincrivel.woff') format('woff'), url('https://exemplo.com/fonteincrivel.ttf') format('truetype');
 }
 ```
 
 <Note>
-The server providing the fonts (`https://example.com/awesome.woff`) needs to support HTTPS and Cross-Origin Resource Sharing (CORS).
+O servidor que fornece as fontes (`https://exemplo.com/fonteincrivel.woff`) precisa suportar HTTPS e Cross-Origin Resource Sharing (CORS).
 </Note>

@@ -1,56 +1,55 @@
 ---
-sidebarTitle: Overview
-title: Settings
+sidebarTitle: Visão Geral
+title: Configurações
 icon: wrench
 ---
 
-## General
+## Geral
 
-The general settings represent the general behaviors of your typebot.
-
-<Frame style={{ maxWidth: '400px' }}>
-  <img src="/images/settings/general.png" alt="General" />
-</Frame>
-
-- **Prefill input**: If enabled, the inputs will be automatically pre-filled whenever their associated variable has a value.
-- **Hide query params on bot start**: If enabled, the query params will be hidden when the bot starts.
-- [**Remember user**](./remember-user)
-
-## Typing emulation
-
-By default, your typebot will emulate a certain typing speed. It is considered a good default as slow as a human typing speed and it's not too fast so that multiple bubbles can be read sequentially.
-
-You can customize this typing speed in the settings:
+As configurações gerais representam os comportamentos gerais do seu typebot.
 
 <Frame style={{ maxWidth: '400px' }}>
-  <img src="/images/settings/typing-emulation.png" alt="Typing emulation" />
+  <img src="/images/settings/general.png" alt="Geral" />
 </Frame>
 
-The goal of a typebot is not to pretend that the bot is a real human. So we suggest not setting the typing speed too low.
+- **Preencher entrada automaticamente**: Se ativado, as entradas serão preenchidas automaticamente sempre que a variável associada tiver um valor.
+- **Ocultar parâmetros de consulta ao iniciar o bot**: Se ativado, os parâmetros de consulta serão ocultos quando o bot iniciar.
+- [**Lembrar usuário**](./remember-user)
 
-The `Disable on first message` allows you to disable the typing emulation on the first message. This is useful if you want to lower the first message display time since the site can take some time to load first.
+## Emulação de digitação
 
-The `Delay between messages` by default is 0 and you can increase it up to 5 seconds if you want to add a delay between **every** messages sent by the typebot. If you ever want to pause the bot just once. You can insert a [Wait block](../editor/blocks/logic/wait) between both messages.
+Por padrão, seu typebot emulará uma certa velocidade de digitação. Considera-se uma boa prática ser tão lento quanto a velocidade de digitação de um humano e não ser muito rápido para que várias bolhas possam ser lidas sequencialmente.
 
-## Security
+Você pode personalizar essa velocidade de digitação nas configurações:
 
-By default, your typebot can be executed from any origin but you can restrict the execution of your typebot to specific origins. This is useful if you want to embed your typebot in your website and prevent it from being executed on other websites by malicious actors.
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/settings/typing-emulation.png" alt="Emulação de digitação" />
+</Frame>
 
-For example, if you want to allow your typebot to be executed only on `https://my-company.com`, you can add `https://my-company.com` to the list of allowed origins.
+O objetivo de um typebot não é fingir que o bot é um humano real. Portanto, sugerimos não definir a velocidade de digitação muito baixa.
+
+A opção `Desativar na primeira mensagem` permite desativar a emulação de digitação na primeira mensagem. Isso é útil se você quiser diminuir o tempo de exibição da primeira mensagem, pois o site pode demorar um pouco para carregar inicialmente.
+
+O `Atraso entre mensagens` por padrão é 0 e você pode aumentá-lo até 5 segundos se quiser adicionar um atraso entre **todas** as mensagens enviadas pelo typebot. Se você quiser pausar o bot apenas uma vez, pode inserir um [bloco de espera](../editor/blocks/logic/wait) entre as duas mensagens.
+
+## Segurança
+
+Por padrão, seu typebot pode ser executado a partir de qualquer origem, mas você pode restringir a execução do seu typebot a origens específicas. Isso é útil se você quiser incorporar seu typebot em seu site e impedir que ele seja executado em outros sites por atores maliciosos.
+
+Por exemplo, se você quiser permitir que seu typebot seja executado apenas em `https://minha-empresa.com`, você pode adicionar `https://minha-empresa.com` à lista de origens permitidas.
 
 <Warning>
-  If you add a URL to the list but omit https://typebot.co, then your typebot
-  shareable URL will not work anymore.
+  Se você adicionar uma URL à lista, mas omitir https://typebot.co, então a URL compartilhável do seu typebot não funcionará mais.
 </Warning>
 
-## Metadata
+## Metadados
 
-In the Metadata section, you can customize how the preview card will look if you share your bot URL on social media for example.
+Na seção de Metadados, você pode personalizar a aparência do cartão de pré-visualização se você compartilhar a URL do seu bot nas redes sociais, por exemplo.
 
-You can also add some custom head code to add third-party scripts.
+Você também pode adicionar algum código de cabeçalho personalizado para adicionar scripts de terceiros.
 
 ### Google Tag Manager
 
-Allows you to easily add a GTM container to your bot. To find your GTM container ID, go to your GTM dashboard and click on the container you want to use. The ID is displayed in the top right corner.
+Permite adicionar facilmente um contêiner do GTM ao seu bot. Para encontrar o ID do seu contêiner GTM, vá ao seu painel do GTM e clique no contêiner que você deseja usar. O ID é exibido no canto superior direito.
 
-Note that you should not include it if you are embedding your typebot in an existing website. GTM should be installed in the parent website instead.
+Observe que você não deve incluí-lo se estiver incorporando seu typebot em um site existente. O GTM deve ser instalado no site pai.
